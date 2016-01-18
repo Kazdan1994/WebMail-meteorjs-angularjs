@@ -1,0 +1,46 @@
+<head>
+  <title>WebMail-meteorjs-angularjs</title>
+</head>
+<body>
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+      <p class="navbar-text pull-left">
+        WebMail avec MeteorJS et AngularJS
+      </p>
+    </div>
+  </nav>
+  <div class="container">
+      <table class="table table-hover spacer">
+        <thead>
+        <tr>
+          <th>
+            <a>De</a>
+          </th>
+          <th>
+            <a>&Agrave;</a>
+          </th>
+          <th>
+            <a>Objet</a>
+          </th>
+          <th>
+            <a>Date</a>
+          </th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each emails}}
+        {{> email}}
+        {{/each}}
+        </tbody>
+      </table>
+  </div>
+</body>
+
+<template name="email">
+  <tr>
+    <td>{{expediteur}}</td>
+    <td>{{destinataire}}</td>
+    <td>{{objet}}</td>
+    <td>{{date}}</td>
+  </tr>
+</template>
