@@ -1,0 +1,43 @@
+<template name="mainLayout">
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+      <p class="navbar-text pull-left">
+        WebMail avec MeteorJS et AngularJS
+      </p>
+    </div>
+  </nav>
+  <div class="container"
+       ng-app="WebMail"
+       ng-controller="WebMailCtrl">
+
+
+    <table class="table table-striped table-hover spacer">
+      <thead>
+      <tr>
+        <th>
+          <a>De</a>
+        </th>
+        <th>
+          <a>&Agrave;</a>
+        </th>
+        <th>
+          <a>Objet</a>
+        </th>
+        <th>
+          <a>Date</a>
+        </th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr ng-repeat="email in emails">
+        <td>{{email.expediteur}}</td>
+        <td>{{email.destinataire}}</td>
+        <td>{{email.username}}</td>
+        <td>{{email.objet}}</td>
+        <td>{{email.content}}</td>
+        <td>{{email.date}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</template>
